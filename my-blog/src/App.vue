@@ -1,10 +1,29 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <menu-bar @menu-selected="handleMenuSelected" />
+    <router-view />
+    <tab-bar @menu-selected="handleMenuSelected" />
+  </div>
 </template>
+
+<script>
+import MenuBar from './components/MenuBar.vue';
+import TabBar from './components/TabBar.vue';
+
+export default {
+  name: "App",
+  components: {
+    MenuBar,
+    TabBar
+  },
+  methods: {
+    handleMenuSelected(page) {
+      // 메뉴 선택 시 라우터를 이용하여 해당 페이지로 이동
+      this.$router.push({ name: page });
+    },
+  },
+}
+</script>
 
 <style>
 #app {
@@ -13,6 +32,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+template {
+  background-color: gray;
+
 }
 
 nav {
