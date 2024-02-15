@@ -1,7 +1,9 @@
 <template>
   <div>
     <menu-bar @menu-selected="handleMenuSelected" />
-    <router-view />
+    <div>
+      <router-view />
+    </div>
     <tab-bar @menu-selected="handleMenuSelected" />
   </div>
 </template>
