@@ -2,7 +2,7 @@
   <div>
     <menu-bar @menu-selected="handleMenuSelected" />
     <div>
-      <router-view />
+      <home-view></home-view>
     </div>
     <tab-bar @menu-selected="handleMenuSelected" />
   </div>
@@ -11,17 +11,20 @@
 <script>
 import MenuBar from './components/MenuBar.vue';
 import TabBar from './components/TabBar.vue';
+import HomeView from './views/HomeView.vue';
 
 export default {
   name: "App",
   components: {
     MenuBar,
-    TabBar
-  },
+    HomeView,
+    TabBar,
+},
   methods: {
     handleMenuSelected(page) {
       // 메뉴 선택 시 라우터를 이용하여 해당 페이지로 이동
-      this.$router.push({ name: page });
+      this.$store.commit("popStateChange", true);
+      this.$store.commit("urlStateAdd", page);
     },
   },
 }

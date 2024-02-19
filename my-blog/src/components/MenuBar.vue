@@ -1,6 +1,6 @@
 <template>
     <div class="menu-bar">
-        <div class="iconButton" @click="selectMenu('about')"><img src="../assets/profileImage.png" alt="Image"></div>
+        <div class="iconButton" @click="selectMenu('AboutView')"><img src="../assets/profileImage.png" alt="Image"></div>
         <p class="title">Bucky's Hompage</p>
         <p class="time">{{ currentTime }}</p>
     </div>

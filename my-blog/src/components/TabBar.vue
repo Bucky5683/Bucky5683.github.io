@@ -1,14 +1,14 @@
 <template>
     <div class="tab-bar">
-        <div class="iconButton" @click="selectMenu('home')">Home🏠</div>
-        <div class="iconButton" @click="selectMenu('github')"><img src="../assets/githubLogo.webp" alt="Image"></div>
-        <div class="iconButton" @click="selectMenu('blog')"><img src="../assets/tstoryLogo.webp" alt="Image"></div>
+        <div class="iconButton" @click="selectMenu('GithubView')"><img src="../assets/githubLogo.webp" alt="Image"></div>
+        <div class="iconButton" @click="selectMenu('BlogView')"><img src="../assets/tstoryLogo.webp" alt="Image"></div>
         <div class="iconButton"><img src="../assets/notionlogo.png" alt="Image"></div>
     </div>
 </template>
-
+  
 <script>
 export default {
+    name: 'TabBar',
     methods: {
         selectMenu(page) {
             // 부모 컴포넌트로 이벤트 전달
@@ -57,9 +57,10 @@ export default {
     display: fixed;
     justify-content: center;
     align-items: center;
-    
+
     box-shadow: 2px 2px 2px 2px rgb(203, 203, 203, 0.3);
 }
+
 .iconButton img {
     height: 100%;
     width: 100%;
