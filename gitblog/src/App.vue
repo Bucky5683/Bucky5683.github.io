@@ -8,7 +8,7 @@
     </div>
     <div class="under-bar">
       <button class="icon"><img class="icon-img" src="./assets/notion.png" /></button>
-      <button class="icon"><img class="icon-img" src="./assets/notion.png" /></button>
+      <button class="icon"><img class="icon-img" id="tstory" src="./assets/tstory.svg" /></button>
       <button class="icon"><img class="icon-img" src="./assets/notion.png" /></button>
       <button class="icon"><img class="icon-img" src="./assets/notion.png" /></button>
       <button class="icon"><img class="icon-img" src="./assets/notion.png" /></button>
@@ -79,8 +79,7 @@ body{
 }
 
 .under-bar{
-  width: 70%;
-  min-width: 50%;
+  min-width: 30%;
   height: 10%;
   position: absolute;
   padding: auto;
@@ -91,7 +90,7 @@ body{
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 3px 6px 3px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.4);
 }
 
 .icon {
@@ -100,13 +99,25 @@ body{
   margin-left: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-right: 10px;
   padding: auto;
+}
+.icon:hover{
+  transition-property: all;
+  transition-duration: 0.5s;
+  margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .icon-img {
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
+}
+
+#tstory {
+  width: 90%;
+  height: 90%;
 }
 
 </style>
