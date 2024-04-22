@@ -8,7 +8,7 @@
       <div class="status-bar-emtybox"></div>
       <div class="time-box"><a class="time">{{ nowTime }}</a></div>
     </div>
-    <div class="modal"><router-view @close_window="delete_opened_window($event)"></router-view></div>
+    <router-view class="modal" @close_window="delete_opened_window($event)"></router-view>
     <div class="under-bar">
       <button class="icon"><img class="icon-img" id="notion" src="./assets/notion.png" /></button>
       <button class="icon"><img class="icon-img" id="tstory" src="./assets/tstory.svg" /></button>
@@ -94,8 +94,13 @@ body {
 
 .modal {
   margin: 10px;
-  display: flex;
-  justify-content: center;
+  width: 500px;
+  min-width: 400px;
+  min-height: 300px;
+  overflow: auto;
+  resize: both;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .status-bar {
